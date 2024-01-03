@@ -1,0 +1,203 @@
+.header {
+    background-color: $white;
+    padding: 24px 0;
+
+    @media (max-width: $media-sm) {
+        padding: 8px 0;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    &--container {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        @media (max-width: $media-mdx) {
+            gap: 12px;
+        }
+    }
+
+    &--top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--logo {
+        color: $text;
+        @media (max-width: $media-sm) {
+            .logo--text {
+                font-size: 18px;
+                line-height: 28px; /* 155.556% */
+            }
+        }
+    }
+
+    &--contact {
+        display: flex;
+        gap: 25px;
+        @media (max-width: $media-sm) {
+            gap: 16px;
+            align-items: center;
+        }
+    }
+    &--burger {
+        display: none;
+        width: 24px;
+        height: 16px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: $media-sm) {
+            display: block;
+        }
+    }
+    &--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            color: $text;
+            font-family: $font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            text-align: right;
+        }
+        @media (max-width: $media-mdx) {
+            display: none;
+        }
+    }
+
+    &--tel {
+        color: $text;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 74px;
+            background-color: $second;
+            position: absolute;
+            top: 0;
+            left: -13px;
+            @media (max-width: $media-mdx) {
+                display: none;
+            }
+        }
+        @media (max-width: $media-sm) {
+            .tel--link {
+                font-size: 20px;
+                line-height: 28px; /* 140% */
+            }
+
+            .tel--text {
+                display: none;
+            }
+        }
+        @media (max-width: $media-xs) {
+            display: none;
+        }
+    }
+
+    &--bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $media-mdx) {
+            padding: 12px 0;
+            border-top: 1px solid $second;
+            border-bottom: 1px solid $second;
+        }
+        @media (max-width: $media-sm) {
+            padding: 12px 24px;
+            display: none;
+        }
+        @media (max-width: $media-xs) {
+            padding: 12px 0;
+        }
+    }
+    &--bottomContact {
+        display: none;
+        @media (max-width: $media-mdx) {
+            display: block;
+        }
+        @media (max-width: $media-sm) {
+            display: none;
+        }
+        @media (max-width: $media-xs) {
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+    }
+    &--bottomText {
+        display: flex;
+        width: 100%;
+        padding: 4px 32px;
+        gap: 8px;
+        p {
+            color: $text;
+            font-family: $font;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 150% */
+            text-align: center;
+            flex: 1 1 233px;
+            &:last-child {
+                flex: 1 1 260px;
+            }
+        }
+        @media (max-width: $media-sm) {
+            p {
+                flex: 1 1 185px;
+                &:last-child {
+                    flex: 1 1 260px;
+                }
+            }
+        }
+        @media (max-width: $media-xs) {
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            p {
+                flex: 0 1 auto;
+                &:last-child {
+                    flex: 0 1 auto;
+                }
+            }
+        }
+    }
+    &--bottomTel {
+        color: $text;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 900;
+
+        font-size: 20px;
+        line-height: 28px; /* 140% */
+        display: none;
+        @media (max-width: $media-xs) {
+            display: block;
+        }
+    }
+    &--nav {
+    }
+
+    &--btn {
+    }
+    &._active {
+        padding: 24px 0;
+        border-radius: 0 0 16px 16px;
+    }
+    &._active &--bottom {
+        display: flex;
+    }
+    &._active &--bottomContact {
+        display: flex;
+    }
+}

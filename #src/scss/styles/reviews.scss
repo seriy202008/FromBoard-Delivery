@@ -1,0 +1,153 @@
+.reviews {
+    &--container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+
+    &--header {
+    }
+
+    &--title {
+    }
+
+    &--body {
+        width: 1490px;
+        @media (max-width: $media-lg) {
+            width: 1004px;
+        }
+        @media (max-width: $media-mdx) {
+            width: 754px;
+        }
+        @media (max-width: $media-sm) {
+            width: 626px;
+        }
+        @media (max-width: $media-xs) {
+            width: 100%;
+        }
+    }
+
+    &--list {
+        width: 100%;
+        //overflow: hidden;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 47px;
+        align-items: center;
+        @media (max-width: $media-lg) {
+            gap: 35px;
+        }
+        @media (max-width: $media-mdx) {
+            gap: 32px;
+        }
+        @media (max-width: $media-xs) {
+            gap: 16px 64px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .slick-track {
+            display: flex;
+            gap: 24px;
+        }
+        .slick-slide {
+            //width: 626px !important;
+        }
+        .slick-arrow {
+            flex: 0 0 60px;
+            width: 60px;
+            height: 60px;
+            background-color: $back;
+            color: $back;
+            background-image: url("@img/icon-arrow.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            @media (max-width: $media-xs) {
+            }
+        }
+        .slick-next {
+            transform: rotate(180deg);
+        }
+        .slick-list {
+            flex: 1 1 auto;
+            @media (max-width: $media-xs) {
+                order: -1;
+                width: 100%;
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    &--item {
+        background-color: $white;
+        padding: 32px 43px;
+        border-radius: 16px;
+        height: 318px;
+        display: flex !important;
+        flex-direction: column;
+        gap: 0px;
+        justify-content: space-between;
+        position: relative;
+        @media (max-width: $media-lg) {
+            height: 276px;
+            padding: 16px;
+        }
+        @media (max-width: $media-mdx) {
+            padding: 32px 16px;
+        }
+        @media (max-width: $media-sm) {
+            height: 320px;
+        }
+        @media (max-width: $media-xs) {
+            height: 400px;
+            padding: 16px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-image: url("@img/icon-quotes.svg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 18px;
+            bottom: 8px;
+        }
+    }
+
+    &--text {
+        color: $text;
+        font-family: $font;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+        position: relative;
+        z-index: 1;
+        @media (max-width: $media-lg) {
+            font-size: 18px;
+            line-height: 28px; /* 155.556% */
+        }
+    }
+
+    &--name {
+        color: $gray2;
+        font-family: $font;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px; /* 133.333% */
+        @media (max-width: $media-lg) {
+            font-size: 16px;
+            line-height: 24px; /* 155.556% */
+        }
+    }
+}

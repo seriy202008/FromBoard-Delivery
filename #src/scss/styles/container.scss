@@ -1,0 +1,16 @@
+.container {
+    margin: 0 auto;
+    width: $media-lg;
+    @media (max-width: $media-lg) {
+        width: $media-md;
+    }
+    @media (max-width: $media-mdx) {
+        width: $media-sm;
+    }
+    @media (max-width: $media-sm) {
+        width: $media-xs;
+    }
+    @media (max-width: $media-xs) {
+        width: $media-xxs;
+    }
+}

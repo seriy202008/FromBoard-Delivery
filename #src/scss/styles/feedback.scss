@@ -1,0 +1,43 @@
+.feedback {
+    &--container {
+        background-color: $white;
+        padding: 64px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        @media (max-width: $media-xs) {
+            padding: 32px;
+        }
+    }
+
+    &--header {
+    }
+
+    &--title {
+    }
+
+    &--body {
+        width: 497px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        @media (max-width: $media-xs) {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &--cell {
+        &-span {
+            grid-column: span 2;
+            @media (max-width: $media-xs) {
+                grid-column: span 1;
+            }
+        }
+    }
+    &--btn {
+        margin-top: -4px;
+    }
+}
